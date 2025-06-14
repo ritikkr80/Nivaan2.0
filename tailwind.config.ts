@@ -63,42 +63,42 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Mental health app specific colors
+				// Updated to mild blue theme
 				calm: {
-					50: '#f8f7ff',
-					100: '#f0efff',
-					200: '#e4e2ff',
-					300: '#d1ccff',
-					400: '#b8acff',
-					500: '#9d88ff',
-					600: '#8b5cf6',
-					700: '#7c3aed',
-					800: '#6d28d9',
-					900: '#5b21b6'
+					50: '#f0f8ff',
+					100: '#e0f2fe',
+					200: '#bae6fd',
+					300: '#7dd3fc',
+					400: '#38bdf8',
+					500: '#0ea5e9',
+					600: '#0284c7',
+					700: '#0369a1',
+					800: '#075985',
+					900: '#0c4a6e'
 				},
 				support: {
-					50: '#fef7f0',
-					100: '#fdeee0',
-					200: '#fbdac1',
-					300: '#f8c197',
-					400: '#f4a261',
-					500: '#f08a5d',
-					600: '#e76f51',
-					700: '#d85a40',
-					800: '#b8472f',
-					900: '#943a24'
+					50: '#f0f9ff',
+					100: '#e0f2fe',
+					200: '#bae6fd',
+					300: '#7dd3fc',
+					400: '#38bdf8',
+					500: '#0ea5e9',
+					600: '#0284c7',
+					700: '#0369a1',
+					800: '#075985',
+					900: '#0c4a6e'
 				},
 				wellness: {
-					50: '#f0fdf4',
-					100: '#dcfce7',
-					200: '#bbf7d0',
-					300: '#86efac',
-					400: '#4ade80',
-					500: '#22c55e',
-					600: '#16a34a',
-					700: '#15803d',
-					800: '#166534',
-					900: '#14532d'
+					50: '#f0f9ff',
+					100: '#e0f2fe',
+					200: '#bae6fd',
+					300: '#7dd3fc',
+					400: '#38bdf8',
+					500: '#0ea5e9',
+					600: '#0284c7',
+					700: '#0369a1',
+					800: '#075985',
+					900: '#0c4a6e'
 				}
 			},
 			borderRadius: {
@@ -158,10 +158,10 @@ export default {
 				'pulse-calm': 'pulse-calm 2s ease-in-out infinite'
 			},
 			backgroundImage: {
-				'calm-gradient': 'linear-gradient(135deg, #f8f7ff 0%, #e4e2ff 50%, #d1ccff 100%)',
-				'support-gradient': 'linear-gradient(135deg, #fef7f0 0%, #fdeee0 50%, #fbdac1 100%)',
-				'wellness-gradient': 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%)',
-				'hero-gradient': 'linear-gradient(135deg, #9d88ff 0%, #8b5cf6 50%, #7c3aed 100%)'
+				'calm-gradient': 'linear-gradient(135deg, #f0f8ff 0%, #e0f2fe 50%, #bae6fd 100%)',
+				'support-gradient': 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%)',
+				'wellness-gradient': 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%)',
+				'hero-gradient': 'linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #0369a1 100%)'
 			}
 		}
 	},

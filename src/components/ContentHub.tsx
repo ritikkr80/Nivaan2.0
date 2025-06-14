@@ -4,8 +4,11 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Heart, Bookmark } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const ContentHub = () => {
+  const navigate = useNavigate();
+
   const wellnessContent = [
     {
       id: 1,
@@ -81,7 +84,11 @@ const ContentHub = () => {
           <p className="text-sm text-yellow-700 dark:text-yellow-200 mb-3">
             {dailyChallenge.description}
           </p>
-          <Button size="sm" className="bg-yellow-500 hover:bg-yellow-600 text-white">
+          <Button 
+            size="sm" 
+            className="bg-yellow-500 hover:bg-yellow-600 text-white"
+            onClick={() => navigate('/challenge')}
+          >
             Join Challenge
           </Button>
         </Card>
@@ -131,6 +138,7 @@ const ContentHub = () => {
                     <Button 
                       size="sm" 
                       className="bg-wellness-500 hover:bg-wellness-600 text-white text-xs"
+                      onClick={() => navigate(`/content/${content.id}`)}
                     >
                       {content.type === 'Video' ? 'Watch' : content.type === 'Article' ? 'Read' : 'Try'}
                     </Button>
@@ -145,6 +153,7 @@ const ContentHub = () => {
         <Button 
           variant="outline" 
           className="w-full border-wellness-300 dark:border-wellness-700 text-wellness-700 dark:text-wellness-300 hover:bg-wellness-50 dark:hover:bg-wellness-900/20"
+          onClick={() => navigate('/challenge')}
         >
           Explore More Content 🔍
         </Button>
