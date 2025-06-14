@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { ChevronRight, ChevronLeft, Heart, Users, Target } from 'lucide-react';
+import { ChevronRight, Heart, Users, Target } from 'lucide-react';
 
 interface OnboardingProps {
   onComplete: () => void;
@@ -42,12 +42,6 @@ const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
       setCurrentScreen(currentScreen + 1);
     } else {
       onComplete();
-    }
-  };
-
-  const handlePrevious = () => {
-    if (currentScreen > 0) {
-      setCurrentScreen(currentScreen - 1);
     }
   };
 
@@ -110,19 +104,9 @@ const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
         </div>
       </div>
 
-      {/* Navigation */}
+      {/* Next button - positioned at bottom right */}
       <div className="p-6">
-        <div className="max-w-md mx-auto flex justify-between items-center">
-          <Button
-            variant="outline"
-            onClick={handlePrevious}
-            disabled={currentScreen === 0}
-            className="flex items-center gap-2"
-          >
-            <ChevronLeft className="w-4 h-4" />
-            Previous
-          </Button>
-
+        <div className="max-w-md mx-auto flex justify-end">
           <Button
             onClick={handleNext}
             className="bg-mild-blue-600 hover:bg-mild-blue-700 text-white flex items-center gap-2"
