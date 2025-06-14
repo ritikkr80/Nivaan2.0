@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { useNavigate } from 'react-router-dom';
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import { LogIn, UserPlus } from 'lucide-react';
 
 const Auth = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -151,13 +152,25 @@ const Auth = () => {
             />
           </div>
 
-          <Button
-            type="submit"
-            className="w-full bg-mild-blue-500 hover:bg-mild-blue-600 text-white"
-            disabled={loading}
-          >
-            {loading ? (isLogin ? 'Signing In...' : 'Creating Account...') : (isLogin ? 'Sign In' : 'Create Account')}
-          </Button>
+          {isLogin ? (
+            <Button
+              type="submit"
+              className="w-full bg-mild-blue-500 hover:bg-mild-blue-600 text-white flex items-center justify-center gap-2"
+              disabled={loading}
+            >
+              <LogIn className="w-4 h-4" />
+              {loading ? 'Signing In...' : 'Log In'}
+            </Button>
+          ) : (
+            <Button
+              type="submit"
+              className="w-full bg-mild-blue-500 hover:bg-mild-blue-600 text-white flex items-center justify-center gap-2"
+              disabled={loading}
+            >
+              <UserPlus className="w-4 h-4" />
+              {loading ? 'Creating Account...' : 'Sign Up'}
+            </Button>
+          )}
         </form>
 
         <div className="mt-6 text-center">
